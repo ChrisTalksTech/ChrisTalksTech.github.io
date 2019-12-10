@@ -18,5 +18,5 @@ Furthermore Flare works in XHTML (with its own madcap caveats), you can find pro
 
 The converter removes **all** CSS attributes and converts HTML entitites to be Flare friendly. You end up with just pure HTML that you can paste into the <body> of your topic.
 
-
+![_config.yml]({{ site.baseurl }}/images/wiki.png)
 
