@@ -17,6 +17,8 @@ With wiki content we get a lot of confluence CSS that is *no bueno* for Flare.
 Furthermore Flare works in XHTML (with its own madcap caveats), you can find problems with things like `&nbsp;`, for example.
 
 The converter removes **all** CSS attributes and converts HTML entitites to be Flare friendly. You end up with just pure HTML that you can paste into the <body> of your topic.
+    
+>If you *CTRL+SHIFT+i* you can copy the `main-content` from your Confluence page. 
 
 ![_config.yml]({{ site.baseurl }}/images/wiki.png)
 
