@@ -15,7 +15,7 @@ If you *CTRL+SHIFT+i*, you can copy the HTML content using developer tools.
 
 ![_config.yml]({{ site.baseurl }}/images/copyingElements.gif)
 
-With HTML content we can get a lot of CSS that is *no bueno* for Flare. The [HTML to Flare XHTML converter](https://christalkstech.github.io/flarify) removes CSS styling and non-Flare friendly entities. You can then paste the *cleaned* content into the <body> of your Flare file.
+With HTML content we can get a lot of CSS that is *no bueno* for Flare. The [HTML to Flare XHTML converter](https://christalkstech.github.io/flarify) removes CSS styling and non-Flare friendly entities. You can then paste the *cleaned* content into the `<body>` of your Flare file.
 
 ![_config.yml]({{ site.baseurl }}/images/pastingElements.gif)
 
