@@ -11,16 +11,12 @@ Skip straight to the [HTML to Flare XHTML converter](https://christalkstech.gith
 ## How it works
 
     
-If you *CTRL+SHIFT+i*, you can copy the `main-content` from your Confluence page. 
+If you *CTRL+SHIFT+i*, you can copy the HTML content using developer tools.
 
-![_config.yml]({{ site.baseurl }}/images/wiki.png)
+![_config.yml]({{ site.baseurl }}/images/copyingElements.gif)
 
-With wiki content we get a lot of confluence CSS that is *no bueno* for Flare.
+With HTML content we can get a lot of CSS that is *no bueno* for Flare. The [HTML to Flare XHTML converter](https://christalkstech.github.io/flarify) removes CSS styling and non-Flare friendly entities. You can then paste the *cleaned* content into the <body> of your Flare file.
 
-    <tbody aria-live="polite" aria-relevant="all"><tr role="row"><td class="confluenceTd">Table Heading</td><td class="confluenceTd">14</td></tr><tr role="row"><td class="confluenceTd"> Title of something</td><td class="confluenceTd">35</td></tr><tr role="row"><td colspan="1" class="confluenceTd">Version number 12</td><td colspan="1" class="confluenceTd">28</td></tr><tr role="row"><td colspan="1" class="confluenceTd">488</td></tr></tbody>
-
-Furthermore, Flare works in XHTML (with its own MadCap caveats), for example, you can find problems with things like `&nbsp;`.
-
-The converter removes **all** CSS attributes and converts HTML entitites to be Flare friendly. You end up with just pure HTML that you can paste into the <body> of your topic.
+![_config.yml]({{ site.baseurl }}/images/pastingElements.gif)
 
 
