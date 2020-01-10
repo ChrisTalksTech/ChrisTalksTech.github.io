@@ -3,7 +3,6 @@ layout: post
 title: Things To Consider With Cloud Documentation
 ---
 
-# Things To Consider With Cloud documentation 
 Making the switch from an On-Premise product to a Software as a Service (SaaS) product has its challenges for technical teams, but there are also things to consider when it comes to Documentation.
 
 ## Content 
