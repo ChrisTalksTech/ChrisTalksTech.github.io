@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_HTML5___Side_Navigation" lang="en-gb" xml:lang="en-gb" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+       <title>Image Map Example Topic</title>
+        <link href="Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+        <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+        </script>
+        <script src="http://www.outsharked.com/scripts/jquery.imagemapster.js">
+        </script>
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js">
+        </script>
+        
+        <script src="../Resources/Scripts/require.min.js" defer="defer" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" defer="defer" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" defer="defer" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" defer="defer" type="text/javascript">
+        </script>
+    </head>
+	<style>
+	@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+/*<meta />*/
+
+body
+{
+	font-family: Arial;
+}
+
+h1
+{
+	font-weight: bold;
+	font-size: 24.0pt;
+}
+
+h2
+{
+	font-weight: bold;
+	font-size: 18.0pt;
+}
+
+h3
+{
+	font-weight: bold;
+	font-size: 14.0pt;
+}
+
+h4
+{
+	font-weight: bold;
+	font-size: 12.0pt;
+}
+
+h5
+{
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+h6
+{
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+
+p
+{
+	font-size: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+
+ol,
+ul
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+img
+{
+	border: none;
+}
+
+a.Popup
+{
+	
+}
+
+MadCap|expandingHead
+{
+	font-style: italic;
+	font-weight: normal;
+	cursor: hand;
+	text-decoration: none;
+	color: #006600;
+}
+
+MadCap|expandingBody
+{
+	color: #777777;
+	font-style: italic;
+}
+
+MadCap|dropDownHotspot
+{
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+	color: #006600;
+}
+
+
+	</style>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <map name="map1" id="map1">
+                                        <area id="area1" class="tipclass" title="tooltip" shape="rect" data-name="all" coords="56,154,916,190" dragDirection="0" href="#" tabindex="1" />
+                                        <area id="area2" class="tipclass" title="tooltip" shape="rect" data-name="all" coords="76,241,815,327" dragDirection="0" href="#" tabindex="2" />
+                                        <area id="area3" class="tipclass" title="tooltip" shape="rect" data-name="all" coords="1,1,1,1" dragDirection="0" href="#" tabindex="3" />
+                                        <area id="area4" class="tipclass" title="tooltip" shape="rect" data-name="all" coords="1,1,1,1" dragDirection="0" href="#" tabindex="4" />
+                                        <area id="area5" class="tipclass" title="tooltip" shape="rect" data-name="all" coords="2,2,2,2" dragDirection="0" href="#" tabindex="5" />
+                                    </map>
+                                    <h1>Image Map Example Topic</h1>
+                                    <p>This page was generated in Flare (the Skin + stylesheets have been removed).     </p>
+                                    <p>The following screenshot was taken from w3schools.com:</p>
+                                    <img src="Resources/Images/w3Screenshot.png" id="exampleImage" class="imageMap" usemap="#map1" />
+                                    <ol style="display: none">
+                                        <li id="1" value="1">This will be the image in your Flare project. We add some extra attributes to the code to get this to work in Flare, for example, 'Class', 'ID', and 'data-name'.</li>
+                                        <li id="2" value="2">This is the  image map, our image maps should be responsive. If you have any problems, try setting the image dimensions inline and removing any CSS resizing.</li>
+                                        <li id="3" value="3">A third option.</li>
+                                        <li id="4" value="4">A fourth option.</li>
+                                        <li id="5" value="5">A fifth?</li>
+                                    </ol>
+                                    <script type="text/javascript">///*<![CDATA[*/
+
+			$(window).load(function(){
+
+			// javascript
+
+			// Set up some options objects: 'single_opts' for when a single area is selected, which will show just a border
+			// 'all_opts' for when all are highlighted, to use a different effect - shaded white with a white border
+			// 'initial_opts' for general options that apply to the whole mapster. 'initial_opts' also includes callbacks
+			// onMouseover and onMouseout, which are fired when an area is entered or left. We will use these to show or
+			// remove the captions, and also set a flag to let the other code know if we're currently in an area.
+			// take content from ordered list with id's '1','2', etc.
+
+
+			var string1 = document.getElementById("1").innerText;
+			var string2 = document.getElementById("2").innerText;
+			var string3 = document.getElementById("3").innerText;
+			var string4 = document.getElementById("4").innerText;
+			var string5 = document.getElementById("5").innerText;
+
+			document.getElementById('area1').title = string1;
+			document.getElementById('area2').title = string2;
+			document.getElementById('area3').title = string3;
+			document.getElementById('area4').title = string4;
+			document.getElementById('area5').title = string5;
+
+			var inArea,
+			map = $('#exampleImage'),
+			captions = {
+			one: [string1],
+			two: [string2],
+			},
+			single_opts = {
+			fillColor: '000000',
+			fillOpacity: 0,
+			//			stroke: true,
+			//			strokeColor: 'ff0000',
+			//			strokeWidth: 2
+			},
+			all_opts = {
+			fillColor: 'ffff66',
+			fillOpacity: 0.5,
+			stroke: true,
+			strokeWidth: 2,
+			strokeColor: 'ffffff'
+			},
+			initial_opts = {
+			mapKey: 'data-name',
+			isSelectable: false,
+			onMouseover: function (data) {
+			inArea = true;
+
+
+			},
+			onMouseout: function (data) {
+			inArea = false;
+
+			}
+			};
+			opts = $.extend({}, all_opts, initial_opts, single_opts);
+
+
+			// Bind to the image 'mouseover' and 'mouseout' events to activate or deactivate ALL the areas, like the
+			// original demo. Check whether an area has been activated with "inArea" - IE<9 fires "onmouseover"
+			// again for the image when entering an area, so all areas would stay highlighted when entering
+			// a specific area in those browsers otherwise. It makes no difference for other browsers.
+
+			map.mapster('unbind')
+			.mapster(opts)
+			.bind('mouseover', function () {
+			if (!inArea) {
+			map.mapster('set_options', all_opts)
+			.mapster('set', true, 'all')
+			.mapster('set_options', single_opts);
+			}
+			}).bind('mouseout', function () {
+			if (!inArea) {
+			map.mapster('set', false, 'all');
+			}
+			});
+
+			});
+
+		///*]]>*/</script>
+                                    <script>/* <![CDATA[ */
+			$(function() {
+			$( ".tipclass" ).tooltip({
+			track:true
+			})
+
+			});
+		/* ]]> */</script>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
