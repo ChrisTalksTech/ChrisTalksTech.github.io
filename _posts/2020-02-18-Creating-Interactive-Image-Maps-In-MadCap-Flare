@@ -1,6 +1,8 @@
-
- Creating Interactive Images in MadCap Flare
-
+---
+layout: post
+title: Creating Interactive Images in MadCap Flare
+---
+ 
 I'll be honest, I've only recently discovered HTML image maps and it just so happens that there is a handy tool in Flare for creating them.
 To me, image maps hark back to a long forgotten time of whacky, off-the-wall web design and you don't see many examples of them these days. I worry that there is a reason for this and I've yet to discover it.
 Anyway, here's how I made some nice interactive images in Flare using HTML image maps and some JQuery plugins.
