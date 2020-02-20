@@ -3,8 +3,8 @@ layout: post
 title: Creating Interactive Images in MadCap Flare
 ---
  
-I'll be honest, I've only recently discovered HTML image maps and it just so happens that there is a handy tool in Flare for creating them.
-To me, image maps hark back to a long forgotten time of whacky, off-the-wall web design and you don't see many examples of them these days. I worry that there is a reason for this and I've yet to discover it.
+I'll be honest, I've only recently discovered HTML image maps and it just so happens that there's a handy tool in Flare for creating them.
+To me, image maps hark back to a long forgotten time of whacky, off-the-wall web design. You don't see many examples of them these days. I worry that there is a reason for this I've yet to discover.
 Anyway, here's how I made some nice interactive images in Flare using HTML image maps and some JQuery plugins.
 
 See the [demo Flare output](https://christalkstech.github.io/imageMapDemo.html).
@@ -25,7 +25,7 @@ To use these in your project, insert the following into the `<head>` of your  im
         </script>
         <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js">
         </script>
-Now you might run into some trouble as Flare might insert the JQuery library during your build. If you find your image map isn't working, try removing this from your build or making sure this one loads first, and then your image mapping plugins load after.
+Now you might run into some trouble as Flare might insert the JQuery library during your build. If you find your image map isn't working, try removing one of the libraries from your build.
 
     <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
     </script> 
