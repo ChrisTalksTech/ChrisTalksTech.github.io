@@ -39,7 +39,7 @@ This inserts the image map into your topic. Getting the Flare generated Image Ma
 If you create a new topic and paste this into the text editor, it should work. 
 
 **Complete code example:**
-``` html
+`` html
 <?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head>
@@ -165,7 +165,7 @@ If you create a new topic and paste this into the text editor, it should work.
     </body>
 </html>
 
-```
+``
 
 You can use this as a template for creating basic interactive images in Flare. The image has 5 mapped areas and under the image there is an ordered list. 
 The text from the ordered list is used as the tooltips in your image map, and each mapped area has a Tab Index from 1 to 5. 
