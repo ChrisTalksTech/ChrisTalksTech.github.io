@@ -30,7 +30,7 @@ Now you might run into some trouble as Flare might insert the JQuery library dur
     <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
     </script> 
 
-Creating an image map is straitforward in Flare, you right-click an image, and select _Image Map..._. 
+Creating an image map is straightforward in Flare, you right-click an image, and select _Image Map..._. 
 ![_config.yml]({{ site.baseurl }}/images/a.png)
 In my example, I've taken a screenshot of the W3 info on Image Maps. and highlighted two areas.
 ![_config.yml]({{ site.baseurl }}/images/b.png)
