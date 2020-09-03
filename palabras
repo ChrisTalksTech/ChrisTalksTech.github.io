@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<title>Learn Vocabulary</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+      <!--
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+-->
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+  <!--  <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a> -->
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">Learn</span> Vocabulary</h1>
+    <p>Test your knowledge of the most commonly used Spanish words.</p>
+
+  </header>
+
+  <!-- Question Section -->
+  <div class="w3-half w3-card-4 w3-container w3-padding-16">
+    <div  class="w3-white w3-card-4 w3-container">
+      <p>Translate: <b><span id="question"></span></b></p>
+    </div>
+  </div>
+
+  <div class="w3-half w3-card-4 w3-container w3-padding-16">
+  <button onclick="validateA()" class="w3-blue w3-padding-16 w3-button w3-block w3-left-align">A. <span id="answerA"></span></button>
+  <button onclick="validateB()" class="w3-light-blue w3-padding-16 w3-button w3-block w3-left-align">B.  <span id="answerB"></span></button>
+  <button onclick="validateC()" class="w3-blue w3-padding-16 w3-button w3-block w3-left-align">C.  <span id="answerC"></span></button>
+  <button onclick="validateD()" class="w3-light-blue w3-padding-16 w3-button w3-block w3-left-align">D.  <span id="answerD"></span></button>
+  </div>
+
+  <div class= "w3-center w3-container w3-padding-16">
+    <button id="startButtonMain" onclick="next()" class=" w3-center w3-green w3-padding-16 w3-button"><span id= "startButton"> Start</span> </button>
+    <button id="resultMain" style="display:none;" class="w3-center w3-green w3-padding-16 w3-button"><span id="result"></span></button>
+    <button id="mainButtonMain" style="display:none;"  class=" w3-center w3-green w3-padding-16 w3-button"><span id= "mainButton"></span> </button>
+
+</div>
+
+
+    <!-- Footer
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+
+  </footer>-->
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+<!-- Script ot pull data from Sheets -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js">	</script>
+            <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'>	</script>
+<script type="text/javascript">
+
+
+          var j = 1;
+          var Q = document.getElementById("question");
+
+          var A = document.getElementById("answerA");
+          var B = document.getElementById("answerB");
+          var C = document.getElementById("answerC");
+          var D = document.getElementById("answerD");
+          var correctAnswer = "test";
+
+        var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1_q2N9Q7UlWcjchOqWg8-id3SeZ-fcAjn3RKsWTmOq5Q/edit?usp=sharing';
+
+        function init() {
+        Tabletop.init( { key: publicSpreadsheetUrl,
+        callback: load,
+        simpleSheet: true } )
+        }
+
+        function showInfo(data, tabletop) {
+        alert('Successfully processed!')
+
+        }
+
+        window.addEventListener('DOMContentLoaded', init)
+        //end data call
+function load(data){
+console.log(data);
+
+//start quiz
+
+        //for(var i=0; i < 4; i++)
+        Q.innerHTML = data[j].Question;
+
+//Take Asnwers and Scramble
+        if (!("scramble" in Array.prototype)) {
+          Object.defineProperty(Array.prototype, "scramble", {
+            enumerable: false,
+            value: function() {
+              var o, i, ln = this.length;
+              while (ln--) {
+                i = Math.random() * (ln + 1) | 0;
+                o = this[ln];
+                this[ln] = this[i];
+                this[i] = o;
+              }
+              return this;
+            }
+          });
+        }
+        var quiz = [{
+          "question": "What is the full form of IP?",
+          "choices": [data[j].Answer, data[j].Answer1, data[j].Answer2, data[j].Answer3],
+          "correct": data[j].Answer
+        }];
+ correctAnswer = data[j].Answer;
+        quiz.forEach(q => q.choices.scramble());
+
+        console.log(quiz[0].choices);
+//Insert HTML answers
+        A.innerHTML = quiz[0].choices[0];
+        B.innerHTML = quiz[0].choices[1];
+        C.innerHTML = quiz[0].choices[2];
+        D.innerHTML = quiz[0].choices[3];
+
+}
+
+
+//Handle submission and answers
+var streakCount= 0;
+
+        var userAnswer = A.innerHTML;
+        var msgCorrect  = "Correcto!   "
+        var msgIncorrect = "No Correcto!";
+        var msgId = document.getElementById("result");
+        var streakDisplay = document.getElementById("mainButton");
+function correct(){
+  msgId.innerHTML= msgCorrect;
+  document.getElementById("mainButtonMain").style.display = "inline-block";
+  document.getElementById("resultMain").style.display = "inline-block";
+  document.getElementById("startButtonMain").style.display = "none";
+  streakCount++;
+  console.log(streakCount);
+next();
+
+    }
+
+function incorrect(){
+  msgId.innerHTML= msgIncorrect;
+  document.getElementById("mainButtonMain").style.display = "inline-block";
+  document.getElementById("resultMain").style.display = "inline-block";
+    document.getElementById("startButtonMain").style.display = "none";
+    document.getElementById("resultMain").className.add = "w3-red";
+  streakCount = 0;
+  next();
+}
+function validateA() {
+
+          if (A.innerHTML == correctAnswer)
+          {
+            correct();
+          }
+          else
+          {
+            incorrect();
+          }
+
+        }
+
+        function validateB() {
+          if (B.innerHTML == correctAnswer)
+          {
+            correct();
+          }
+          else
+          {
+            incorrect();
+          }
+        }
+        function validateC() {
+          if (C.innerHTML == correctAnswer)
+          {
+            correct();
+          }
+          else
+          {
+            incorrect();
+          }
+        }
+        function validateD() {
+          if (D.innerHTML == correctAnswer)
+          {
+            correct();
+          }
+          else
+          {
+            incorrect();
+          }
+        }
+
+function next() {
+  j = Math.floor(Math.random() * 250);
+   init()
+   streakDisplay.innerHTML = "Streak: " + "<b>" + streakCount + "<b>";
+}
+</script>
+</script>
+
+
+</html>
